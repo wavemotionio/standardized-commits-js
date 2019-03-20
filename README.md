@@ -3,12 +3,12 @@
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/wavemotionio/standardized-commits-js/issues)
 Large software teams require the automation of a complex network of communication channels in order to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards this goal. Once in place, we can use the commit message standard to:
 
-1. help keep our commits within scope
-1. help other developers understand our intent
-1. automate semantic versioning
-1. automate CHANGELOG.md
-1. automate Release notes
-1. more!
+- help keep our commits within scope
+- help other developers understand our intent
+- automate semantic versioning
+- automate CHANGELOG.md
+- automate Release notes
+- and more!
 
 ## Tutorial Setup
 
