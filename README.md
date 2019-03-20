@@ -3,10 +3,10 @@
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/wavemotionio/standardized-commits-js/issues) [![Greenkeeper badge](https://badges.greenkeeper.io/wavemotionio/standardized-commits-js.svg)](https://greenkeeper.io/)
 *There is minimal impact of adopting this standard. It only requires an additional prefix to each commit message such as: `<type>: normal commit message`.*
 
-:white_check_mark: This repository serves to:
-1. Document why implementing standardized commit messages into our workflow is helpful to all of us.
-1. Document the [standard types](#Types).
-1. Demonstrate commit message linting along with a CLI tool for assistance: [run demo of this repository](#Demo).
+This repository serves to:
+1. Demonstrate and document why implementing standardized commit messages into our workflow is helpful to all of us.
+1. Demonstrate using a CLI tool for writing commits in the standard format: [run demo of this repository](#Demo).
+1. Document a [reference to the standard types](#Types).
 1. Outline how to implement commit message linting in a repository: [step-by-step tutorial](#Setup).
 1. [Explore the next steps](#Next-Steps) available to us once conventional commits are in place.
 
