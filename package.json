@@ -1,7 +1,7 @@
 {
   "name": "standardized-commits-js",
   "version": "1.0.0",
-  "description": "A barebones example of standardizing commit messages",
+  "description": "An example of standardizing commit messages with conventional-commits, commitlint, and config-conventional",
   "scripts": {
     "commit": "node_modules/.bin/sgc",
     "test": "./node_modules/.bin/eslint ./"
