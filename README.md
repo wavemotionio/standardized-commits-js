@@ -11,7 +11,7 @@ Large software teams must leverage automation in order to best harness the compl
 
 ### The Conventional Commits Standard
 
-#### [types](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
+#### [Types](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
 - **chore** - Changes that affect the build system or external dependencies and moving files
 - **ci** - Changes to our CI configuration files and scripts
 - **docs** - Documentation only changes
@@ -22,7 +22,7 @@ Large software teams must leverage automation in order to best harness the compl
 - **style** - Changes that do not affect the meaning of the code
 - **test** - Adding missing tests or correcting existing tests
 
-#### [examples](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
+#### [Examples](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
 1. `feat: example feature without scope defined`
 1. `ci(commitlint): example ci task with scope defined`
 1. Example of a full commit message with type, scope, header, body, and footer:
@@ -90,5 +90,5 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 - [@semantic-release/git](https://github.com/semantic-release/git) - Commit release assets to the project's git repository
 - [@semantic-release/npm](https://github.com/semantic-release/npm) - Publish a npm package
 
-## Notable alternatives
+## Alternatives CLI
 - [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
