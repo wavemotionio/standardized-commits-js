@@ -81,7 +81,7 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 - [@semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator) - Generate changelog content with conventional-changelog
 - [@semantic-release/git](https://github.com/semantic-release/git) - Commit release assets to the project's git repository
 - [@semantic-release/npm](https://github.com/semantic-release/npm) - Publish a npm package
-
+- [semantic-release-ado](https://github.com/lluchmk/semantic-release-ado)
 
 ## Alternatives CLI
 - [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
