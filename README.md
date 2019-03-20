@@ -5,10 +5,10 @@
 
 :white_check_mark: This repository serves to:
 1. Document why implementing standardized commit messages into our workflow is helpful to all of us.
-1. Document the different [types](#Types). :white_check_mark:
-1. Demonstrate commit message linting along with a CLI tool for assistance: [demo this repository](#Demo).
-1. Outline how to implement commit message linting in a repository: [step-by-step](#Setup).
-1. Explore the [next steps](#Next-Steps) available to us once conventional commits are in place.
+1. Document the [standard types](#Types).
+1. Demonstrate commit message linting along with a CLI tool for assistance: [run demo of this repository](#Demo).
+1. Outline how to implement commit message linting in a repository: [step-by-step tutorial](#Setup).
+1. [Explore the next steps](#Next-Steps) available to us once conventional commits are in place.
 
 ### Standarizing commit messages
 - Convention defined by [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/).
