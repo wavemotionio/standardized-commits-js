@@ -4,11 +4,11 @@
 *There is minimal impact of adopting this standard. It only requires an additional prefix to each commit message such as: `<type>: normal commit message`.*
 
 This repository serves to:
-:white_check_mark: Document why implementing standardized commit messages into our workflow is helpful to all of us.
-:white_check_mark: Document the different [types](#Types).
-:white_check_mark: Demonstrate commit message linting along with a CLI tool for assistance: [demo this repository](#Demo).
-:white_check_mark: To outline how to implement commit message linting in a repository: [step-by-step](#Setup).
-:chart: Next steps available to us once conventional commits are in place:
+1. Document why implementing standardized commit messages into our workflow is helpful to all of us. :white_check_mark:
+1. Document the different [types](#Types). :white_check_mark:
+1. Demonstrate commit message linting along with a CLI tool for assistance: [demo this repository](#Demo). :white_check_mark:
+1. To outline how to implement commit message linting in a repository: [step-by-step](#Setup). :white_check_mark:
+1. To outline the next steps available to us once conventional commits are in place: :chart:
 - Help keep our commits within scope
 - Help other developers understand our intent
 - Automate semantic versioning
@@ -18,13 +18,19 @@ This repository serves to:
 - Help guide branch name strategy
 - [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
-### The Conventional Commits Standard
+### Standarizing commit messages
+- [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
+- Rules are strictly defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
 
-Rules defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
+Format: `type(scope?): subject`
 
-#### [Format](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
-- `type(scope?): subject`
-- example: `fix: added $timeout`
+#### Examples
+- `fix: added $timeout to prevent the race condition`
+- `perf: removed the $timeout`
+- `style(megamenu): removed the border`
+- `test(unit): added coverage to login route`
+- `feat: adds preset filters`
+- `ci(yml): adds build step for dependency graph tool`
 
 # Types
 These types are the essence of the standard.  Types are configured in the CLI: [node-semantic-git-commit-cli](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc).
