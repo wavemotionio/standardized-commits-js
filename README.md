@@ -24,15 +24,15 @@ BREAKING CHANGE: footer text
 ```
 
 ### [types](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
-**chore** - Changes that affect the build system or external dependencies and moving files
-**ci** - Changes to our CI configuration files and scripts
-**docs** - Documentation only changes
-**feat** - New feature
-**fix** - Bug fix
-**perf** - Code change that improves performance
-**refactor** - Code change that neither fixes a bug nor adds a feature
-**style** - Changes that do not affect the meaning of the code
-**test** - Adding missing tests or correcting existing tests
+- **chore** - Changes that affect the build system or external dependencies and moving files
+- **ci** - Changes to our CI configuration files and scripts
+- **docs** - Documentation only changes
+- **feat** - New feature
+- **fix** - Bug fix
+- **perf** - Code change that improves performance
+- **refactor** - Code change that neither fixes a bug nor adds a feature
+- **style** - Changes that do not affect the meaning of the code
+- **test** - Adding missing tests or correcting existing tests
 
 ## Tutorial Setup
 1. `git init standardized-commits-js`
