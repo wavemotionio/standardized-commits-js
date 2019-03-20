@@ -83,5 +83,5 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 - [@semantic-release/npm](https://github.com/semantic-release/npm) - Publish a npm package
 - [semantic-release-ado](https://github.com/lluchmk/semantic-release-ado) - Automatic builds on Azure DevOps pipelines
 
-## Alternatives CLI
+## Alternative CLI Tool
 - [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
