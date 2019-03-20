@@ -4,12 +4,14 @@
 Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error. Once in place, we can use the commit message standard to:
 - Help keep our commits within scope
 - Help other developers understand our intent
-- Automate semantic versioning
+- Automate semantic 
 - Automate CHANGELOG.md
 - Automate Release Notes
 - [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
 ### The Conventional Commits Standard
+
+Rules defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
 
 #### [Types](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
 - **chore** - Changes that affect the build system or external dependencies and moving files
@@ -24,6 +26,7 @@ Large software teams must leverage automation in order to best harness the compl
 
 #### [Format](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
 - `type(scope?): subject`
+- example: `fix: added $timeout`
 
 
 ## Tutorials
