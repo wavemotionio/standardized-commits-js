@@ -12,7 +12,7 @@ This repository serves to:
 
 ### Standarizing commit messages
 - Convention defined by [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/).
-- Strict linting defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
+- Strict linting defined by: [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular).
 - Format: `type(scope?): subject`
 
 #### Examples
@@ -55,7 +55,7 @@ Start your own project with standardized commmits.
 1. `git init repoName`
 2. `cd repoName`
 3. `npm init`
-4. `npm install husky semantic-git-commit-cli @commitlint/cli @commitlint/config-conventional --save-dev`
+4. `npm install husky semantic-git-commit-cli @commitlint/cli @commitlint/config-angular --save-dev`
 5. Add husky hook to package.json
 ```
 {
@@ -75,7 +75,7 @@ Start your own project with standardized commmits.
 ```
 7. Add commitlint.config.js
 ```
-module.exports = {extends: ['@commitlint/config-conventional']}
+module.exports = {extends: ['@commitlint/config-angular']}
 ```
 8. Add script to package.json (below) or `npm i -g semantic-git-commit-cli`
 ```
@@ -86,6 +86,10 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 }
 ```
 9. If script added, `npm run commit` or if installed globally, [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
+
+# Additional Information
+- Angular [commit message convention](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+- [Conventional Change](https://github.com/conventional-changelog/conventional-changelog)
 
 # Next Steps
 - Help keep our commits within scope
@@ -101,8 +105,8 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 - [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
 # Alternatives
-- [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
-- [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular) - Angular commit linting config. Note: 'chore' type removed.
+- [semantic-git-commit-cli](https://www.npmjs.com/package/semantic-git-commit-cli) - A CLI to keep semantic git commits.
+- [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional) - Adds 'chore' type.
 
 # Conclusion
 Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error.

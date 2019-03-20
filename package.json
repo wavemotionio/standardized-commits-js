@@ -1,9 +1,9 @@
 {
   "name": "standardized-commits-js",
   "version": "1.0.0",
-  "description": "An example of standardizing commit messages with conventional-commits, commitlint, and config-conventional",
+  "description": "An example of standardizing commit messages with conventional-commits, conventional-changelog, commitlint, and config-angular",
   "scripts": {
-    "commit": "node_modules/.bin/sgc",
+    "commit": "git-cz",
     "test": "./node_modules/.bin/eslint ./"
   },
   "husky": {
@@ -17,18 +17,24 @@
   },
   "keywords": [
     "commitlint",
-    "conventional-commits",
+    "conventional-changelog-angular",
     "standardized-commits",
-    "semantic-git-commit-cli"
+    "commitizen"
   ],
   "author": "wavemotionio",
   "license": "ISC",
   "homepage": "https://github.com/wavemotionio/standardized-commits-js#readme",
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/config-angular": "^7.5.0",
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.15.3",
-    "husky": "^1.3.1",
-    "semantic-git-commit-cli": "^3.2.1"
+    "husky": "^1.3.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
