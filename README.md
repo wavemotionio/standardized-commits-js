@@ -1,13 +1,22 @@
 # standardized-commits-js
-This will make you think about branch names and pull request titles differently.
 
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/wavemotionio/standardized-commits-js/issues) [![Greenkeeper badge](https://badges.greenkeeper.io/wavemotionio/standardized-commits-js.svg)](https://greenkeeper.io/)
-Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error. Once in place, we can use the commit message standard to:
+*There is minimal impact of adopting this standard. It only requires an additional prefix to each commit message such as: `<type>: normal commit message`.*
+
+This repository serves to:
+- :white_check_mark: Document why implementing standardized commit messages into our workflow is helpful to all of us.
+- :white_check_mark: Document the different [types](###The-Conventional-Commits-Standard).
+- :white_check_mark: Demonstrate commit message linting along with a CLI tool for assistance: [demo this repository](###Instructions:-try-out-this-project).
+- :white_check_mark: To outline how to implement commit message linting in a repository: [step-by-step](###Setup:-start-your-own-project-with-standardized-commmits).
+
+Next steps available to us once conventional commits are in place: :chart:
 - Help keep our commits within scope
 - Help other developers understand our intent
 - Automate semantic versioning
 - Automate CHANGELOG.md
 - Automate Release Notes
+- Guide or automate Pull Request titles
+- Help guide branch name strategy
 - [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
 ### The Conventional Commits Standard
@@ -15,6 +24,8 @@ Large software teams must leverage automation in order to best harness the compl
 Rules defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
 
 #### [Types](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
+These types are the essence of the standard.
+
 - **chore** - Changes that affect the build system or external dependencies and moving files
 - **ci** - Changes to our CI configuration files and scripts
 - **docs** - Documentation only changes
@@ -88,3 +99,6 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 
 ## Alternative CLI Tool
 - [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
+
+## Conclusion:
+Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error. 
