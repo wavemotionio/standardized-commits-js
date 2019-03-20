@@ -1,0 +1,37 @@
+{
+  "name": "standardized-commits-js",
+  "version": "1.0.0",
+  "description": "A barebones example of standardizing commit messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "node_modules/.bin/sgc"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavemotionio/standardized-commits-js.git"
+  },
+  "keywords": [
+    "standardized-commits",
+    "commit",
+    "message",
+    "formatting"
+  ],
+  "author": "wavemotionio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wavemotionio/standardized-commits-js/issues"
+  },
+  "homepage": "https://github.com/wavemotionio/standardized-commits-js#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "husky": "^1.3.1",
+    "semantic-git-commit-cli": "^3.2.1"
+  }
+}
