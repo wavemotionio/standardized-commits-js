@@ -49,7 +49,7 @@ BREAKING CHANGE: footer text
   },
 }
 ```
-6. Add script to package.json or `npm i -g semantic-git-commit-cli` and [use cli command](https://github.com/JPeer264/node-semantic-git-commit-cli)
+6. Add script to package.json (below) or `npm i -g semantic-git-commit-cli` and [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
 ```
 {
   "scripts": {
