@@ -28,7 +28,6 @@ Rules defined by: [@commitlint/config-conventional](https://www.npmjs.com/packag
 - `type(scope?): subject`
 - example: `fix: added $timeout`
 
-
 ## Tutorials
 
 ### Instructions: try out this project
