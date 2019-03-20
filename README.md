@@ -9,9 +9,20 @@ Large software teams must leverage automation in order to best harness the compl
 - Automate Release Notes
 - and more!
 
-## The Conventional Commits Standard
+### The Conventional Commits Standard
 
-### [format](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
+#### [types](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
+- **chore** - Changes that affect the build system or external dependencies and moving files
+- **ci** - Changes to our CI configuration files and scripts
+- **docs** - Documentation only changes
+- **feat** - New feature
+- **fix** - Bug fix
+- **perf** - Code change that improves performance
+- **refactor** - Code change that neither fixes a bug nor adds a feature
+- **style** - Changes that do not affect the meaning of the code
+- **test** - Adding missing tests or correcting existing tests
+
+#### [examples](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
 1. `feat: example feature without scope defined`
 1. `ci(commitlint): example ci task with scope defined`
 1. Example of a full commit message with type, scope, header, body, and footer:
@@ -23,20 +34,22 @@ body text with some more details
 BREAKING CHANGE: footer text
 ```
 
-### [types](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
-- **chore** - Changes that affect the build system or external dependencies and moving files
-- **ci** - Changes to our CI configuration files and scripts
-- **docs** - Documentation only changes
-- **feat** - New feature
-- **fix** - Bug fix
-- **perf** - Code change that improves performance
-- **refactor** - Code change that neither fixes a bug nor adds a feature
-- **style** - Changes that do not affect the meaning of the code
-- **test** - Adding missing tests or correcting existing tests
+## Tutorials
 
-## Tutorial Setup
-1. `git init standardized-commits-js`
-2. `cd standardized-commits-js`
+### Instructions: try out this project
+1. `git clone https://github.com/wavemotionio/standardized-commits-js.git`
+1. `cd standardized-commits-js`
+1. `npm install`
+1. make changes to a tracked file
+1. `git add -A`
+1. `git commit -m "test"` (fails)
+1. `git commit -m "docs: test"` (success)
+1. `git commit -m "docs(readme): test"` (success)
+1. `npm run commit`, use CLI prompts (success)
+
+### Setup: start your own project with standardized commmits
+1. `git init repoName`
+2. `cd repoName`
 3. `npm init`
 4. `npm install husky semantic-git-commit-cli @commitlint/cli @commitlint/config-conventional --save-dev`
 5. Add husky hook to package.json
@@ -60,7 +73,7 @@ BREAKING CHANGE: footer text
 ```
 module.exports = {extends: ['@commitlint/config-conventional']}
 ```
-8. Add script to package.json (below) or `npm i -g semantic-git-commit-cli` and [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
+8. Add script to package.json (below) or `npm i -g semantic-git-commit-cli`
 ```
 {
   "scripts": {
@@ -68,4 +81,14 @@ module.exports = {extends: ['@commitlint/config-conventional']}
   },
 }
 ```
+9. If script added, `npm run commit` or if installed globally, [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
 
+## Next steps
+- [semantic-release](https://github.com/semantic-release/semantic-release) - Fully automated version management and package publishing
+- [@semantic-release/changelog](https://github.com/semantic-release/changelog) - Create or update a changelog file
+- [@semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator) - Generate changelog content with conventional-changelog
+- [@semantic-release/git](https://github.com/semantic-release/git) - Commit release assets to the project's git repository
+- [@semantic-release/npm](https://github.com/semantic-release/npm) - Publish a npm package
+
+## Notable alternatives
+- [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
