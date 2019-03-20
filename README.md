@@ -19,20 +19,20 @@ This repository serves to:
 - `fix: added $timeout to prevent the race condition`
 - `perf: removed the $timeout`
 - `style(megamenu): removed the border`
-- `test(unit): added coverage to login route`
+- `test(service): added coverage to login route`
 - `feat: adds preset filters`
-- `ci(yml): adds build step for dependency graph tool`
 
 # Types
-These types are the essence of the standard.  Types are configured in the CLI to make following the rules easier. [node-semantic-git-commit-cli](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
+These types are the essence of the standard.  Types are linted by [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular)
 
-- **chore** - Changes that affect the build system or external dependencies and moving files
+- **build** - Changes that affect the build system or external dependencies and moving files
 - **ci** - Changes to our CI configuration files and scripts
 - **docs** - Documentation only changes
 - **feat** - New feature
 - **fix** - Bug fix
 - **perf** - Code change that improves performance
 - **refactor** - Code change that neither fixes a bug nor adds a feature
+- **revert** - Revert code changes
 - **style** - Changes that do not affect the meaning of the code
 - **test** - Adding missing tests or correcting existing tests
 
@@ -55,8 +55,13 @@ Start your own project with standardized commmits.
 1. `git init repoName`
 2. `cd repoName`
 3. `npm init`
-4. `npm install husky semantic-git-commit-cli @commitlint/cli @commitlint/config-angular --save-dev`
-5. Add husky hook to package.json
+4. `npm install husky commitizen @commitlint/cli @commitlint/config-angular --save-dev`
+5. `npx commitizen init cz-conventional-changelog --save-dev --save-exact`
+6. Add commitlint.config.js
+```
+module.exports = {extends: ['@commitlint/config-angular']}
+```
+6. Add husky hook to package.json
 ```
 {
   "husky": {
@@ -66,30 +71,19 @@ Start your own project with standardized commmits.
   },
 }
 ```
-6. Add .sgcrc file
-```
-{
-    "body": false,
-    "lowercaseTypes": true
-}
-```
-7. Add commitlint.config.js
-```
-module.exports = {extends: ['@commitlint/config-angular']}
-```
-8. Add script to package.json (below) or `npm i -g semantic-git-commit-cli`
+8. Add script to package.json (optional).
 ```
 {
   "scripts": {
-    "commit": "node_modules/.bin/sgc"
+    "commit": "git-cz"
   },
 }
 ```
-9. If script added, `npm run commit` or if installed globally, [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
+9. If script added in step 8, `npm run commit` otherwise use the [commitizen CLI tool described here](https://github.com/commitizen/cz-cli)
 
 # Additional Information
 - Angular [commit message convention](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
-- [Conventional Change](https://github.com/conventional-changelog/conventional-changelog)
+- [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog)
 
 # Next Steps
 - Help keep our commits within scope
