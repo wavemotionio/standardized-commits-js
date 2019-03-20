@@ -64,7 +64,7 @@ Start your own project with standardized commmits.
 ```
 module.exports = {extends: ['@commitlint/config-conventional']}
 ```
-6. Add husky hook to package.json
+7. Add husky hook to package.json
 ```
 {
   "husky": {
