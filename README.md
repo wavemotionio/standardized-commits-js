@@ -4,7 +4,7 @@
 Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error. Once in place, we can use the commit message standard to:
 - Help keep our commits within scope
 - Help other developers understand our intent
-- Automate semantic 
+- Automate semantic versioning
 - Automate CHANGELOG.md
 - Automate Release Notes
 - [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
