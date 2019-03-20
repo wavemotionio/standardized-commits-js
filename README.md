@@ -49,7 +49,18 @@ BREAKING CHANGE: footer text
   },
 }
 ```
-6. Add script to package.json (below) or `npm i -g semantic-git-commit-cli` and [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
+6. Add .sgcrc file
+```
+{
+    "body": false,
+    "lowercaseTypes": true
+}
+```
+7. Add commitlint.config.js
+```
+module.exports = {extends: ['@commitlint/config-conventional']}
+```
+8. Add script to package.json (below) or `npm i -g semantic-git-commit-cli` and [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
 ```
 {
   "scripts": {
@@ -57,14 +68,4 @@ BREAKING CHANGE: footer text
   },
 }
 ```
-7. Add .sgcrc file
-```
-{
-    "body": false,
-    "lowercaseTypes": true
-}
-```
-8. Add commitlint.config.js
-```
-module.exports = {extends: ['@commitlint/config-conventional']}
-```
+
