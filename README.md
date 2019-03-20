@@ -12,7 +12,7 @@ This repository serves to:
 
 ### Standarizing commit messages
 - Convention defined by [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/).
-- Strict linting defined by: [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular).
+- Strict linting defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
 - Format: `type(scope?): subject`
 
 #### Examples
@@ -23,9 +23,9 @@ This repository serves to:
 - `feat: adds preset filters`
 
 # Types
-These types are the essence of the standard.  Types are linted by [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular)
+These types are the essence of the standard.  Types are linted by [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
 
-- **build** - Changes that affect the build system or external dependencies and moving files
+- **chore** - Changes that affect the build system or external dependencies and moving files
 - **ci** - Changes to our CI configuration files and scripts
 - **docs** - Documentation only changes
 - **feat** - New feature
@@ -47,7 +47,7 @@ Try out this demo project.
 1. `git commit -m "test"` (fails)
 1. `git commit -m "docs: test"` (success)
 1. `git commit -m "docs(readme): test"` (success)
-1. `npm run commit`, use CLI prompts (success)
+1. `npm run c`, use CLI prompts (success)
 
 # Setup
 Start your own project with standardized commmits.
@@ -55,14 +55,14 @@ Start your own project with standardized commmits.
 1. `git init repoName`
 2. `cd repoName`
 3. `npm init`
-4. `npm install husky commitizen cz-conventional-changelog @commitlint/cli @commitlint/config-angular --save-dev`
+4. `npm install husky commitizen cz-conventional-changelog @commitlint/cli @commitlint/config-conventional --save-dev`
 5. Add .czrc to configure commitizen with cz-conventional-changelog
 ```
 { "path": "cz-conventional-changelog" }
 ```
 6. Add commitlint.config.js
 ```
-module.exports = {extends: ['@commitlint/config-angular']}
+module.exports = {extends: ['@commitlint/config-conventional']}
 ```
 6. Add husky hook to package.json
 ```
@@ -82,7 +82,7 @@ module.exports = {extends: ['@commitlint/config-angular']}
   },
 }
 ```
-9. If script added in step 8, `npm run commit` otherwise use the [commitizen CLI tool described here](https://github.com/commitizen/cz-cli)
+9. If script added in step 8, `npm run c` otherwise use the [commitizen CLI tool described here](https://github.com/commitizen/cz-cli)
 
 # Additional Information
 - Angular [commit message convention](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
@@ -103,7 +103,7 @@ module.exports = {extends: ['@commitlint/config-angular']}
 
 # Alternatives
 - [semantic-git-commit-cli](https://www.npmjs.com/package/semantic-git-commit-cli) - A CLI to keep semantic git commits.
-- [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional) - Adds 'chore' type.
+- [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular) - Replace 'chore' with 'build' type.
 
 # Conclusion
 Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error.
