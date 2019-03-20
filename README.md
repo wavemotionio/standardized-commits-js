@@ -100,8 +100,9 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 - [semantic-release-ado](https://github.com/lluchmk/semantic-release-ado) - Automatic builds on Azure DevOps pipelines
 - [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
-# Alternative CLI Tool
+# Alternatives
 - [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
+- [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular) - Angular commit linting config. Note: 'chore' type removed.
 
 # Conclusion
 Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error.
