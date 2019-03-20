@@ -7,7 +7,7 @@ Large software teams must leverage automation in order to best harness the compl
 - Automate semantic versioning
 - Automate CHANGELOG.md
 - Automate Release Notes
-- and more!
+- [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
 ### The Conventional Commits Standard
 
@@ -22,17 +22,9 @@ Large software teams must leverage automation in order to best harness the compl
 - **style** - Changes that do not affect the meaning of the code
 - **test** - Adding missing tests or correcting existing tests
 
-#### [Examples](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
-1. `feat: example feature without scope defined`
-1. `ci(commitlint): example ci task with scope defined`
-1. Example of a full commit message with type, scope, header, body, and footer:
-``` 
-fix(authredirect): example heading
-<blankline>
-body text with some more details
-<blankline>
-BREAKING CHANGE: footer text
-```
+#### [Format](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
+- `type(scope?): subject`
+
 
 ## Tutorials
 
@@ -89,6 +81,7 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 - [@semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator) - Generate changelog content with conventional-changelog
 - [@semantic-release/git](https://github.com/semantic-release/git) - Commit release assets to the project's git repository
 - [@semantic-release/npm](https://github.com/semantic-release/npm) - Publish a npm package
+
 
 ## Alternatives CLI
 - [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
