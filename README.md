@@ -55,8 +55,11 @@ Start your own project with standardized commmits.
 1. `git init repoName`
 2. `cd repoName`
 3. `npm init`
-4. `npm install husky commitizen @commitlint/cli @commitlint/config-angular --save-dev`
-5. `npx commitizen init cz-conventional-changelog --save-dev --save-exact`
+4. `npm install husky commitizen cz-conventional-changelog @commitlint/cli @commitlint/config-angular --save-dev`
+5. Add .czrc to configure commitizen with cz-conventional-changelog
+```
+{ "path": "cz-conventional-changelog" }
+```
 6. Add commitlint.config.js
 ```
 module.exports = {extends: ['@commitlint/config-angular']}
