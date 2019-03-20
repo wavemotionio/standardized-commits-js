@@ -3,26 +3,17 @@
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/wavemotionio/standardized-commits-js/issues) [![Greenkeeper badge](https://badges.greenkeeper.io/wavemotionio/standardized-commits-js.svg)](https://greenkeeper.io/)
 *There is minimal impact of adopting this standard. It only requires an additional prefix to each commit message such as: `<type>: normal commit message`.*
 
-This repository serves to:
-1. Document why implementing standardized commit messages into our workflow is helpful to all of us. :white_check_mark:
+:white_check_mark: This repository serves to:
+1. Document why implementing standardized commit messages into our workflow is helpful to all of us.
 1. Document the different [types](#Types). :white_check_mark:
-1. Demonstrate commit message linting along with a CLI tool for assistance: [demo this repository](#Demo). :white_check_mark:
-1. To outline how to implement commit message linting in a repository: [step-by-step](#Setup). :white_check_mark:
-1. To outline the next steps available to us once conventional commits are in place: :chart:
-- Help keep our commits within scope
-- Help other developers understand our intent
-- Automate semantic versioning
-- Automate CHANGELOG.md
-- Automate Release Notes
-- Guide or automate Pull Request titles
-- Help guide branch name strategy
-- [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
+1. Demonstrate commit message linting along with a CLI tool for assistance: [demo this repository](#Demo).
+1. Outline how to implement commit message linting in a repository: [step-by-step](#Setup).
+1. Explore the [next steps](#Next-Steps) available to us once conventional commits are in place.
 
 ### Standarizing commit messages
-- [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/)
-- Rules are strictly defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
-
-Format: `type(scope?): subject`
+- Convention defined by [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/).
+- Strict linting defined by: [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional).
+- Format: `type(scope?): subject`
 
 #### Examples
 - `fix: added $timeout to prevent the race condition`
@@ -33,7 +24,7 @@ Format: `type(scope?): subject`
 - `ci(yml): adds build step for dependency graph tool`
 
 # Types
-These types are the essence of the standard.  Types are configured in the CLI: [node-semantic-git-commit-cli](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc).
+These types are the essence of the standard.  Types are configured in the CLI to make following the rules easier. [node-semantic-git-commit-cli](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
 
 - **chore** - Changes that affect the build system or external dependencies and moving files
 - **ci** - Changes to our CI configuration files and scripts
@@ -97,15 +88,20 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 9. If script added, `npm run commit` or if installed globally, [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
 
 # Next Steps
+- Help keep our commits within scope
+- Help other developers understand our intent
+- Guide or automate Pull Request titles
+- Help guide branch name strategy
 - [semantic-release](https://github.com/semantic-release/semantic-release) - Fully automated version management and package publishing
 - [@semantic-release/changelog](https://github.com/semantic-release/changelog) - Create or update a changelog file
 - [@semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator) - Generate changelog content with conventional-changelog
 - [@semantic-release/git](https://github.com/semantic-release/git) - Commit release assets to the project's git repository
 - [@semantic-release/npm](https://github.com/semantic-release/npm) - Publish a npm package
 - [semantic-release-ado](https://github.com/lluchmk/semantic-release-ado) - Automatic builds on Azure DevOps pipelines
+- [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
 # Alternative CLI Tool
 - [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
 
 # Conclusion
-Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error. 
+Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error.
