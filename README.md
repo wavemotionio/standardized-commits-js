@@ -1,7 +1,7 @@
 # standardized-commits-js
 
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](https://github.com/wavemotionio/standardized-commits-js/issues) [![Greenkeeper badge](https://badges.greenkeeper.io/wavemotionio/standardized-commits-js.svg)](https://greenkeeper.io/)
-*There is minimal impact of adopting this standard. It only requires an additional prefix to each commit message such as: `<type>: normal commit message`.*
+*There is minimal impact of adopting this standard. It only requires an additional prefix to each commit message such as: `<type>: normal commit message`*
 
 This repository serves to:
 1. Demonstrate and document why implementing standardized commit messages into our workflow is helpful to all of us.
@@ -19,12 +19,11 @@ This repository serves to:
 - `fix: added $timeout to prevent the race condition`
 - `perf: removed the $timeout`
 - `style(megamenu): removed the border`
-- `test(unit): added coverage to login route`
+- `test(service): added coverage to login route`
 - `feat: adds preset filters`
-- `ci(yml): adds build step for dependency graph tool`
 
 # Types
-These types are the essence of the standard.  Types are configured in the CLI to make following the rules easier. [node-semantic-git-commit-cli](https://github.com/JPeer264/node-semantic-git-commit-cli/blob/master/.sgcrc)
+These types are the essence of the standard.  Types are linted by [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
 
 - **chore** - Changes that affect the build system or external dependencies and moving files
 - **ci** - Changes to our CI configuration files and scripts
@@ -33,6 +32,7 @@ These types are the essence of the standard.  Types are configured in the CLI to
 - **fix** - Bug fix
 - **perf** - Code change that improves performance
 - **refactor** - Code change that neither fixes a bug nor adds a feature
+- **revert** - Revert code changes
 - **style** - Changes that do not affect the meaning of the code
 - **test** - Adding missing tests or correcting existing tests
 
@@ -47,7 +47,7 @@ Try out this demo project.
 1. `git commit -m "test"` (fails)
 1. `git commit -m "docs: test"` (success)
 1. `git commit -m "docs(readme): test"` (success)
-1. `npm run commit`, use CLI prompts (success)
+1. `npm run c`, use CLI prompts (success)
 
 # Setup
 Start your own project with standardized commmits.
@@ -55,8 +55,16 @@ Start your own project with standardized commmits.
 1. `git init repoName`
 2. `cd repoName`
 3. `npm init`
-4. `npm install husky semantic-git-commit-cli @commitlint/cli @commitlint/config-conventional --save-dev`
-5. Add husky hook to package.json
+4. `npm install husky commitizen cz-conventional-changelog @commitlint/cli @commitlint/config-conventional --save-dev`
+5. Add .czrc to configure commitizen with cz-conventional-changelog
+```
+{ "path": "cz-conventional-changelog" }
+```
+6. Add commitlint.config.js
+```
+module.exports = {extends: ['@commitlint/config-conventional']}
+```
+7. Add husky hook to package.json
 ```
 {
   "husky": {
@@ -66,26 +74,19 @@ Start your own project with standardized commmits.
   },
 }
 ```
-6. Add .sgcrc file
-```
-{
-    "body": false,
-    "lowercaseTypes": true
-}
-```
-7. Add commitlint.config.js
-```
-module.exports = {extends: ['@commitlint/config-conventional']}
-```
-8. Add script to package.json (below) or `npm i -g semantic-git-commit-cli`
+8. Add script to package.json (optional).
 ```
 {
   "scripts": {
-    "commit": "node_modules/.bin/sgc"
+    "commit": "git-cz"
   },
 }
 ```
-9. If script added, `npm run commit` or if installed globally, [use these cli commands](https://github.com/JPeer264/node-semantic-git-commit-cli)
+9. If script added in step 8, `npm run c` otherwise use the [commitizen CLI tool described here](https://github.com/commitizen/cz-cli)
+
+# Additional Information
+- Angular [commit message convention](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+- [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog)
 
 # Next Steps
 - Help keep our commits within scope
@@ -100,8 +101,9 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 - [semantic-release-ado](https://github.com/lluchmk/semantic-release-ado) - Automatic builds on Azure DevOps pipelines
 - [and more](https://slides.com/marionebl/the-perks-of-committing-with-conventions#/)!
 
-# Alternative CLI Tool
-- [commitizen](https://github.com/commitizen/cz-cli) - The commitizen command line utility
+# Alternatives
+- [semantic-git-commit-cli](https://www.npmjs.com/package/semantic-git-commit-cli) - A CLI to keep semantic git commits.
+- [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular) - Replace 'chore' with 'build' type.
 
 # Conclusion
 Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error.
