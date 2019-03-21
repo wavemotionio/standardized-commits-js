@@ -25,7 +25,6 @@ This repository serves to:
 # Types
 These types are the essence of the standard.  Types are linted by [@commitlint/config-conventional](https://www.npmjs.com/package/@commitlint/config-conventional)
 
-- **chore** - Changes that affect the build system or external dependencies and moving files
 - **ci** - Changes to our CI configuration files and scripts
 - **docs** - Documentation only changes
 - **feat** - New feature
@@ -35,6 +34,9 @@ These types are the essence of the standard.  Types are linted by [@commitlint/c
 - **revert** - Revert code changes
 - **style** - Changes that do not affect the meaning of the code
 - **test** - Adding missing tests or correcting existing tests
+
+- **build** - Changes that affect the build system or external dependencies and moving files
+- **chore** - Changes that affect the build system or external dependencies and moving files
 
 # Demo
 Try out this demo project.
@@ -103,7 +105,7 @@ module.exports = {extends: ['@commitlint/config-conventional']}
 
 # Alternatives
 - [semantic-git-commit-cli](https://www.npmjs.com/package/semantic-git-commit-cli) - A CLI to keep semantic git commits.
-- [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular) - Replace 'chore' with 'build' type.
+- [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular) - favor 'build' vs. 'chore' type.
 
 # Conclusion
 Large software teams must leverage automation in order to best harness the complex network of communication channels required to effectively deliver business value in a timely manner.  Standardized commit messaging is a great initial step towards the automation of mundane tasks that are prone to human error.
